@@ -55,4 +55,4 @@ jobs:
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
           repository: SaPer663/online_furniture_store_backend
           event-type: build-project
-          client-payload: '{"submodule": "${{ github.repository }}", "sha": "${{ github.sha}}"}'
+          client-payload: '{"image": "${{ secrets.FRONTEND_IMAGE_TAG }}", "sha": "${{ github.sha}}"}'
