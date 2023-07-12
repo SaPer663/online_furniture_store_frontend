@@ -24,7 +24,7 @@ jobs:
       - run: npm run build
 
   frontend_build_and_push_to_docker_hub:
-    if: github.ref == 'refs/heads/feature/setup_ci_cd'
+    if: github.ref == 'refs/heads/develop'
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     steps:
