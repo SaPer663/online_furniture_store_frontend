@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: ['main', 'develop']
+    branches: ['main', 'develop', 'feature/setup_ci_cd']
   pull_request:
-    branches: ['main', 'develop']
+    branches: ['main', 'develop', 'feature/setup_ci_cd']
 
 jobs:
   frontend_linter:
@@ -24,7 +24,7 @@ jobs:
       - run: npm run build
 
   frontend_build_and_push_to_docker_hub:
-    if: github.ref == 'refs/heads/feat/develop'
+    if: github.ref == 'refs/heads/feature/setup_ci_cd'
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     steps:
